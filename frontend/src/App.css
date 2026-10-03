@@ -1,0 +1,536 @@
+/* =========================
+   CONNECTLY - GLOBAL STYLE
+========================= */
+
+:root {
+  --accent: #7c3aed;
+  --accent-dark: #5b21b6;
+  --bg: #f5f6fa;
+  --card: #ffffff;
+  --text: #222;
+  --muted: #777;
+  --border: #e5e7eb;
+  --danger: #dc2626;
+  --shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+  background: white;
+  border-bottom: 1px solid var(--border);
+  padding: 16px 30px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+nav a:first-of-type {
+  margin-left: auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+main {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 35px 20px;
+}
+
+.posts-title {
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+/* =========================
+   POST CARD
+========================= */
+
+.post-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 22px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow);
+}
+
+.post-author {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+.post-content {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+.post-time {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.post-image {
+  display: block;
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 15px 0;
+}
+
+/* =========================
+   LIKE / POST BUTTONS
+========================= */
+
+.like-count {
+  font-weight: bold;
+  margin: 12px 0;
+}
+
+.like-button,
+.edit-button,
+.delete-button,
+.save-button,
+.cancel-button,
+.comment-button,
+.load-comments-button {
+  border: none;
+  border-radius: 8px;
+  padding: 9px 14px;
+  margin: 4px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.like-button {
+  background: #f3e8ff;
+  color: var(--accent-dark);
+}
+
+.like-button:hover {
+  background: #e9d5ff;
+}
+
+.edit-button {
+  background: #eef2ff;
+  color: #4338ca;
+}
+
+.edit-button:hover {
+  background: #e0e7ff;
+}
+
+.delete-button {
+  background: #fee2e2;
+  color: var(--danger);
+}
+
+.delete-button:hover {
+  background: #fecaca;
+}
+
+.save-button {
+  background: var(--accent);
+  color: white;
+}
+
+.save-button:hover {
+  background: var(--accent-dark);
+}
+
+.cancel-button {
+  background: #e5e7eb;
+  color: #333;
+}
+
+/* =========================
+   EDIT POST
+========================= */
+
+.post-card textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  resize: vertical;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+/* =========================
+   COMMENTS
+========================= */
+
+.comments-section {
+  border-top: 1px solid var(--border);
+  margin-top: 20px;
+  padding-top: 18px;
+}
+
+.comments-section h4 {
+  margin-bottom: 12px;
+}
+
+.comment {
+  background: #f8f8fb;
+  padding: 10px 12px;
+  border-radius: 9px;
+  margin-bottom: 8px;
+}
+
+.comment strong {
+  margin-right: 8px;
+}
+
+.comments-section input {
+  width: calc(100% - 110px);
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  outline: none;
+}
+
+.comments-section input:focus {
+  border-color: var(--accent);
+}
+
+.comment-button {
+  background: var(--accent);
+  color: white;
+}
+
+.comment-button:hover {
+  background: var(--accent-dark);
+}
+
+.load-comments-button {
+  background: #f1f5f9;
+  color: #334155;
+}
+
+/* =========================
+   ERROR / LOADING
+========================= */
+
+.error-message {
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 16px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.retry-button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 9px 15px;
+  border-radius: 8px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+  nav {
+    padding: 12px 15px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  nav a:first-of-type {
+    margin-left: 0;
+  }
+
+  main {
+    padding: 20px 12px;
+  }
+
+  .post-card {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .posts-title {
+    font-size: 24px;
+  }
+
+  .comments-section input {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .comment-button,
+  .load-comments-button {
+    margin-left: 0;
+  }
+}
+/* =========================
+   CREATE POST
+========================= */
+
+.create-post {
+  max-width: 700px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+.create-post h2 {
+  margin-top: 0;
+  margin-bottom: 22px;
+}
+
+.create-post textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  resize: vertical;
+  font-size: 16px;
+  outline: none;
+}
+
+.create-post textarea:focus {
+  border-color: var(--accent);
+}
+
+.character-count {
+  text-align: right;
+  color: var(--muted);
+  font-size: 13px;
+  margin: 6px 0 20px;
+}
+
+.image-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.create-post input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  background: #fafafa;
+}
+
+.image-preview {
+  margin-top: 20px;
+}
+
+.image-preview p {
+  font-weight: 600;
+}
+
+.image-preview img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.create-button {
+  width: 100%;
+  margin-top: 22px;
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+  background: var(--accent);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.create-button:hover {
+  background: var(--accent-dark);
+}
+
+.create-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.username-message {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-users-box {
+  max-width: 700px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.search-users-box h2 {
+  margin-top: 0;
+  margin-bottom: 22px;
+}
+
+.search-input-row {
+  display: flex;
+  gap: 10px;
+}
+
+.search-input-row input {
+  flex: 1;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+}
+
+.search-input-row input:focus {
+  border-color: var(--accent);
+}
+
+.search-users-button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  background: var(--accent);
+  color: white;
+  font-weight: bold;
+}
+
+.search-users-button:hover {
+  background: var(--accent-dark);
+}
+
+.search-users-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.search-message {
+  margin: 18px 0;
+  color: var(--muted);
+  text-align: center;
+}
+
+.search-results {
+  margin-top: 20px;
+}
+
+.search-result {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  margin-bottom: 10px;
+  background: #fafafa;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.search-user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.search-avatar {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3e8ff;
+  border-radius: 50%;
+}
+
+.follow-button {
+  border: none;
+  border-radius: 8px;
+  padding: 9px 14px;
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+}
+
+.follow-button:hover {
+  background: var(--accent-dark);
+}
+
+@media (max-width: 600px) {
+  .search-users-box {
+    margin: 20px 12px;
+    padding: 20px;
+  }
+
+  .search-input-row {
+    flex-direction: column;
+  }
+
+  .search-users-button {
+    width: 100%;
+  }
+
+  .search-result {
+    align-items: flex-start;
+    gap: 12px;
+    flex-direction: column;
+  }
+
+  .follow-button {
+    width: 100%;
+  }
+}
